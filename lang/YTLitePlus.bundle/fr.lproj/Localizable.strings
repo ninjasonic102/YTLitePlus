@@ -67,6 +67,9 @@
 "ENABLE_TAP_TO_SEEK" = "Enable Tap To Seek";
 "ENABLE_TAP_TO_SEEK_DESC" = "Jump to anywhere in a video by single-tapping the seek bar";
 
+"ENABLE_FRAME_STEP" = "Activer les contrôles image par image";
+"ENABLE_FRAME_STEP_DESC" = "Ajoute des contrôles avant et arrière image par image au lecteur vidéo. Utilisez les touches fléchées ou les boutons à l'écran.";
+
 "DISABLE_PULL_TO_FULLSCREEN_GESTURE" = "Disable pull-to-fullscreen gesture";
 "DISABLE_PULL_TO_FULLSCREEN_GESTURE_DESC" = "Disable the drag gesture to enter vertical fullscreen. Only applies to landscape videos.";
 

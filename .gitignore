@@ -7,3 +7,6 @@ Tweaks/YTLite/*
 Resources/
 *.ipa
 .vscode
+
+# IntelliJ IDEA / JetBrains IDE files
+.idea/

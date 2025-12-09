@@ -67,6 +67,9 @@
 "ENABLE_TAP_TO_SEEK" = "Enable Tap To Seek";
 "ENABLE_TAP_TO_SEEK_DESC" = "Jump to anywhere in a video by single-tapping the seek bar";
 
+"ENABLE_FRAME_STEP" = "Enable Frame-by-Frame Controls";
+"ENABLE_FRAME_STEP_DESC" = "Adds precise frame-by-frame video navigation. Use arrow keys (←/→) or comma/period keys (,/.) on external keyboard, or on-screen buttons.";
+
 "DISABLE_PULL_TO_FULLSCREEN_GESTURE" = "Disable pull-to-fullscreen gesture";
 "DISABLE_PULL_TO_FULLSCREEN_GESTURE_DESC" = "Disable the drag gesture to enter vertical fullscreen. Only applies to landscape videos.";
 
