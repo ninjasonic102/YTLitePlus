@@ -46,6 +46,11 @@ on:
         default: false
         required: false
         type: boolean
+      enable_ytuhd:
+        description: "Enable YTUHD tweak"
+        default: true
+        required: false
+        type: boolean
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -112,7 +117,15 @@ jobs:
           ./theos-jailed/install
         env:
           THEOS: ${{ github.workspace }}/theos
-        
+
+      - name: Clone YTUHD
+        if: ${{ inputs.enable_ytuhd }}
+        uses: actions/checkout@v4.1.7
+        with:
+          repository: Tonwalter888/YTUHD
+          ref: 44535466ad464d8b4c3338a289f1b729bb7d1e4a
+          path: ${{ github.workspace }}/YTUHD
+
       - name: Fix Compiling
         run: |
           # Update GNU Make to allow for faster building
@@ -194,7 +207,7 @@ jobs:
           name: YTLitePlus_${{ env.YT_VERSION }}_${{ env.YTLITE_VERSION }}
           path: ${{ github.workspace }}/main/packages/${{ steps.build_package.outputs.package }}
           if-no-files-found: error
-          
+
       - name: Upload Artifact to Catbox and update AltStore repo
         if: ${{ inputs.catbox_upload }}
         run: |
@@ -205,7 +218,7 @@ jobs:
           # Pass Catbox URL to the release steps
           echo "CATBOX_FILE=$CATBOX_FILE" >> $GITHUB_ENV
           echo "CATBOX_URL=$CATBOX_URL" >> $GITHUB_ENV
-      
+
       - name: Prepare Release Notes
         if: ${{ inputs.create_release }}
         run: |
